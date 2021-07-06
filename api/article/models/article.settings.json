@@ -12,27 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "text",
-      "required": true
-    },
-    "content": {
-      "type": "richtext",
-      "required": true
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title",
-      "required": true
-    },
-    "category": {
-      "model": "category",
-      "via": "articles"
-    },
     "image": {
       "model": "file",
       "via": "related",
@@ -45,9 +24,35 @@
       "required": true,
       "pluginOptions": {}
     },
-    "author": {
-      "via": "articles",
-      "model": "writer"
+    "venue": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "events"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "time": {
+      "type": "string"
+    },
+    "performers": {
+      "type": "string"
     }
   }
 }
